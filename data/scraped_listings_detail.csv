@@ -1,0 +1,11 @@
+id,name,room_type,price,rating,scraped_at
+sample_1,Casa de praia em Mosqueiro,Quarto inteiro,192.02600172977884,4.810052645962271,2025-09-02T12:51:11.727320
+sample_2,Chalé rústico em Outeiro,Quarto compartilhado,328.5234282028089,3.9404523316852353,2025-09-02T12:51:11.727333
+sample_3,Casa moderna próxima ao Ver-o-Peso,Quarto compartilhado,221.95956201417977,4.014646385022887,2025-09-02T12:51:11.727338
+sample_4,Flat no Reduto,Quarto inteiro,222.45168447321652,3.8098881936516937,2025-09-02T12:51:11.727343
+sample_5,Chalé rústico em Outeiro,Casa inteira,253.46367436541115,3.5150765041550187,2025-09-02T12:51:11.727347
+sample_6,Suíte confortável em Batista Campos,Casa inteira,285.45066299790716,3.9651614201970076,2025-09-02T12:51:11.727351
+sample_7,Apartamento aconchegante no centro de Belém,Casa inteira,371.9947942121196,3.9720497150901943,2025-09-02T12:51:11.727355
+sample_8,Apartamento aconchegante no centro de Belém,Casa inteira,276.04805353912946,3.5611784748764737,2025-09-02T12:51:11.727358
+sample_9,Quarto privativo em Nazaré,Quarto compartilhado,158.98437041018883,4.176548567297049,2025-09-02T12:51:11.727362
+sample_10,Casa moderna próxima ao Ver-o-Peso,Casa inteira,177.76377742102147,4.357915225772845,2025-09-02T12:51:11.727366
