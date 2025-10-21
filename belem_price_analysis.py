@@ -33,6 +33,8 @@ import random
 import json
 from urllib.parse import quote, urlencode
 import re
+import pyairbnb
+import json
 
 # Web scraping imports
 try:
@@ -533,28 +535,45 @@ def main():
     if not nh_split.empty:
         nh_split.to_csv(out_dir / "price_neighbourhood.csv", index=False)
 
-    # Charts (no seaborn, default matplotlib colors)
-    # Daily average price time series
-    fig1 = plt.figure()
-    plt.plot(daily["date"], daily["avg_price"])
-    plt.xlabel("Date")
-    plt.ylabel("Average Price")
-    plt.title(f"Belém/PA — Daily Average Price ({start} to {end})")
-    plt.xticks(rotation=45, ha="right")
-    plt.tight_layout()
-    fig1.savefig(charts_dir / "daily_avg_price.png", dpi=150)
-    plt.close(fig1)
+    # Define search parameters
+    currency = "BRL"  # Currency for the search
+    check_in = "2025-11-10"  # Check-in date
+    check_out = "2025-11-21"  # Check-out date
+    ne_lat = -1.3742  # North-East latitude (Belém do Pará area)
+    ne_long = -48.4458  # North-East longitude
+    sw_lat = -1.5242  # South-West latitude
+    sw_long = -48.5458  # South-West longitude
+    zoom_value = 1  # Zoom level for the map
+    price_min = 1000
+    price_max = 100000
+    place_type = "" #or "Entire home/apt" or empty
+    amenities = []  # Example: Filter for listings with WiFi and Pool or leave empty
+    free_cancellation = False  # Filter for listings with free/flexible cancellation
+    language = "pt"
+    proxy_url = ""
 
-    # Boxplot for Oct–Nov prices
-    fig2 = plt.figure()
-    plt.boxplot(win[price_col].dropna().values, vert=True, showfliers=False)
-    plt.ylabel("Price")
-    plt.title(f"Belém/PA — Price Distribution (Oct–Nov)")
-    plt.tight_layout()
-    fig2.savefig(charts_dir / "price_box_oct_nov.png", dpi=150)
-    plt.close(fig2)
+    # Search listings within specified coordinates and date range using keyword arguments
+    search_results = pyairbnb.search_all(
+        check_in=check_in,
+        check_out=check_out,
+        ne_lat=ne_lat,
+        ne_long=ne_long,
+        sw_lat=sw_lat,
+        sw_long=sw_long,
+        zoom_value=zoom_value,
+        price_min=price_min,
+        price_max=price_max,
+        place_type=place_type,
+        amenities=amenities,
+        free_cancellation=free_cancellation,
+        currency=currency,
+        language=language,
+        proxy_url=proxy_url
+    )
 
-    print("Saved outputs to:", out_dir.resolve())
+    # Save the search results as a JSON file
+    with open('batch2.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(search_results))  # Convert results to JSON and write to file
 
 if __name__ == "__main__":
     main()
