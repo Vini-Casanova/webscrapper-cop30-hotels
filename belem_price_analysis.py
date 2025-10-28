@@ -1,27 +1,5 @@
 #!/usr/bin/env python3
-"""
-Belém/PA — Price Analysis for October and November with Web Scraping
 
-This script computes robust price metrics for a chosen Oct–Nov window using
-InsideAirbnb-style CSVs (or similar). It can also scrape Airbnb data directly
-for educational purposes.
-
-It expects:
-- calendar.csv[.gz] with columns: listing_id, date, price, available
-- listings.csv[.gz] (optional) with columns: id, room_type, neighbourhood_cleansed
-
-Outputs:
-- output/prices_summary.csv            (overall stats)
-- output/daily_avg_price.csv           (date-level avg/median)
-- output/listing_avg_price_oct_nov.csv (per-listing stats)
-- output/charts/daily_avg_price.png
-- output/charts/price_box_oct_nov.png
-
-Usage:
-    python belem_price_analysis.py --data-dir ./data --start 2025-10-01 --end 2025-11-30
-    python belem_price_analysis.py --scrape --location "Belém, PA" --checkin 2025-10-01 --checkout 2025-11-30
-If --start/--end are omitted, defaults to the current year Oct–Nov.
-"""
 import argparse
 import sys
 from pathlib import Path
