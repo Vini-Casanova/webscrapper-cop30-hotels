@@ -1,0 +1,11 @@
+listing_id,title,price,rating,room_type,location,scraped_at,source,note
+sample_1,Casa de praia em Mosqueiro,192.02600172977884,4.810052645962271,Quarto inteiro,"Belém, PA",2025-09-02T12:51:11.727320,simple_scraper_sample,This is sample data for educational purposes
+sample_2,Chalé rústico em Outeiro,328.5234282028089,3.9404523316852353,Quarto compartilhado,"Belém, PA",2025-09-02T12:51:11.727333,simple_scraper_sample,This is sample data for educational purposes
+sample_3,Casa moderna próxima ao Ver-o-Peso,221.95956201417977,4.014646385022887,Quarto compartilhado,"Belém, PA",2025-09-02T12:51:11.727338,simple_scraper_sample,This is sample data for educational purposes
+sample_4,Flat no Reduto,222.45168447321652,3.8098881936516937,Quarto inteiro,"Belém, PA",2025-09-02T12:51:11.727343,simple_scraper_sample,This is sample data for educational purposes
+sample_5,Chalé rústico em Outeiro,253.46367436541115,3.5150765041550187,Casa inteira,"Belém, PA",2025-09-02T12:51:11.727347,simple_scraper_sample,This is sample data for educational purposes
+sample_6,Suíte confortável em Batista Campos,285.45066299790716,3.9651614201970076,Casa inteira,"Belém, PA",2025-09-02T12:51:11.727351,simple_scraper_sample,This is sample data for educational purposes
+sample_7,Apartamento aconchegante no centro de Belém,371.9947942121196,3.9720497150901943,Casa inteira,"Belém, PA",2025-09-02T12:51:11.727355,simple_scraper_sample,This is sample data for educational purposes
+sample_8,Apartamento aconchegante no centro de Belém,276.04805353912946,3.5611784748764737,Casa inteira,"Belém, PA",2025-09-02T12:51:11.727358,simple_scraper_sample,This is sample data for educational purposes
+sample_9,Quarto privativo em Nazaré,158.98437041018883,4.176548567297049,Quarto compartilhado,"Belém, PA",2025-09-02T12:51:11.727362,simple_scraper_sample,This is sample data for educational purposes
+sample_10,Casa moderna próxima ao Ver-o-Peso,177.76377742102147,4.357915225772845,Casa inteira,"Belém, PA",2025-09-02T12:51:11.727366,simple_scraper_sample,This is sample data for educational purposes
